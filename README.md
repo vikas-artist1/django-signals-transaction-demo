@@ -1,6 +1,6 @@
 ### By default, do Django signals run in the same database transaction as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
-**Answer:** Yes, Django signals run in the same database transaction as the caller by default. This means that when a signal is triggered, the operations performed within the signal handler are part of the same transaction as the operation initiated by the caller. Django signals are executed within the same atomic block as the caller's database operation. An atomic block ensures that all tasks within it are treated as a single unit of work, and that they all succeed or all fail together.
+ Yes, Django signals run in the same database transaction as the caller by default. This means that when a signal is triggered, the operations performed within the signal handler are part of the same transaction as the operation initiated by the caller. Django signals are executed within the same atomic block as the caller's database operation. An atomic block ensures that all tasks within it are treated as a single unit of work, and that they all succeed or all fail together.
 
 Below is the code snippet that demonstrates signals run in the same database transaction as the caller:
 
